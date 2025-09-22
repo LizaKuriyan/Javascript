@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var str = "   I loved the FOOD and the service!   ";
+        var trimmed = str.trim();
+        var lower= trimmed.toLowerCase();
+        var rep = lower.replace(/food/gi,"ambience");
+        var pos=rep.search("service");
+        var arr = rep.split(" ");
+        var i;
+        var newarr="";
+        for (i = 0; i < arr.length; i++)
+        {
+           newarr += arr[i] + "\n";
+        }
+
+        console.log(`ORGINAL STRING=${str}`);
+        console.log(`String after trimmed=${trimmed}`);
+        console.log(`String after converting to lowercase=${lower}`);
+        console.log(`String after replacing "food" with "ambience"=${rep}`);
+        console.log(`Position of the word "service"=${pos}`);
+        console.log(`NEW ARRAY=${newarr}`);
+        
+    </script>
+</body>
+</html>
