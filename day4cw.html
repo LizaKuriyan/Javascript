@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var randomval = Math.floor(Math.random()* 100)+1;
+        var score = prompt("Enter the user score:");
+        var userScore = Number(score);
+        var diff = randomval-userScore;
+        var rounded_sqrt = Math.round(Math.sqrt(userScore));
+        var pivalue = Math.PI;
+        var product = "50" * 2;
+
+        console.log(`RANDOM VALUE=${randomval}`)
+        console.log(`USER SCORE=${userScore}`);
+        console.log(`DIFFERENCE=${diff}`);
+        console.log(`ROUNDED SQUARE ROOT OF USER SCORE=${rounded_sqrt}`);
+        console.log(`VALUE OF PI=${pivalue}`);
+        console.log(`PRODUCT RESULT=${product}`);
+
+    </script>
+</body>
+</html>
