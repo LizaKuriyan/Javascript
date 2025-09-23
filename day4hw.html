@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var mysteryLevel = Math.floor(Math.random()* 50)+1;
+        var score = prompt("Enter your score:");
+        var userScore = Number(score);
+        var diff = Math.abs(mysteryLevel-userScore);
+        var usersqrt = Math.sqrt(userScore);
+        var pivalue = Math.PI;
+        var product = "20" * 5;
+        var high = Math.max(10,20,mysteryLevel);
+        var low = Math.min(10,20,mysteryLevel);
+
+        console.log(`MYSTERY LEVEL VALUE=${mysteryLevel}`)
+        console.log(`USER SCORE=${userScore}`);
+        console.log(`DIFFERENCE=${diff}`);
+        console.log(`SQUARE ROOT OF USER SCORE=${usersqrt}`);
+        console.log(`VALUE OF PI=${pivalue}`);
+        console.log(`PRODUCT RESULT=${product}`);
+        console.log(`MAX VALUE AMONG 10,20 AND ${mysteryLevel}=${high}`);
+        console.log(`MIN VALUE AMONG 10,20 AND ${mysteryLevel}=${low}`);
+
+    </script>
+</body>
+</html>
