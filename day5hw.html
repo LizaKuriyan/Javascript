@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Access Check</title>
+</head>
+<body>
+     <button onclick="checkAccess()">CHECK ACCESS</button>
+     <p id="id1"></p>
+     <script>
+        let user = {
+            name:"Arnold",
+            age: 40,
+            isAdmin:true
+        };
+
+        function checkAccess()
+        {
+            let output ="";
+            let access = ((user.age>=18) && (user.isAdmin==true))? "ACCESS GRANTED":"ACCESS DENIED";
+            output += access +"<br>";
+            if("age" in user)
+             {
+               var ifresult=`Age Property exist in user object: ${user.age}`;
+               output+=ifresult + "<br>";
+             }
+            else
+             {
+               var elseresult=`Age Property does not exist in user object`;
+               output+=elseresult + "<br>";
+             }
+            delete user.age;
+            var delresult=`Deleted Age Property!<br>Is Age inside user objec now? ${"age" in user}`;
+            output+=delresult + "<br>";
+            document.getElementById("id1").innerHTML=output;
+        }
+     </script>
+</body>
+</html>
