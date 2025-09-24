@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkEligibility()">CHECK ELIGIBILITY</button>
+    <p id="id1"></p>
+    <script>
+        let order =
+        {
+            itemName:"SHOES",
+            isDelivered : true,
+            daysSinceDelivery:10
+        };
+
+        function checkEligibility()
+        {
+            let output ="";
+            let eligible = ((order.isDelivered==true) && (order.daysSinceDelivery>=7))?  "Eligible for Return":"Return Period Expired";
+            output += eligible +"<br>";
+            if("itemName" in order)
+             {
+               var ifresult=`Item Name Property exist in user object: ${order.itemName}`;
+               output+=ifresult + "<br>";
+             }
+            else
+             {
+               var elseresult=`Item Name Property does not exist in user object`;
+               output+=elseresult + "<br>";
+             }
+            delete order.daysSinceDelivery;
+            var delresult=`Days since delivery Property Removed!<br>Is days since delivery inside order objec now? ${"daysSinceDelivery" in order}`;
+            output+=delresult + "<br>";
+            document.getElementById("id1").innerHTML=output;
+        }
+    </script>
+</body>
+</html>
