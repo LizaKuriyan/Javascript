@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id1"></p>
+
+    <script>
+      let item_name = ["Apple","Banana","Grapes","Strawberry"];
+      let item_price = [30,25,55,90];
+      let product_list=[];
+      let out="";
+
+      product_list = item_name.map((value, index) => 
+      {
+        return `Product: ${value} - Price: ${item_price[index]} <br>`;
+      });
+
+      let display1="";
+      for(let i=0;i<product_list.length;i++)
+      {
+       display1+=product_list[i]+"<br>";
+      }
+
+      let exp_item="";
+      product_list.forEach((item, index) => 
+      {
+        if (item_price[index] > 50)
+        {
+          exp_item += item+ "<br>";
+        }
+      });
+
+      item_name.push("Watermelon");
+      item_price.push(80);
+      
+      updated_product_list = item_name.map((value, index) => 
+      {
+       return `Product: ${value} - Price: ${item_price[index]} <br>`;
+      });
+
+      let display2="";
+      for(let i=0;i<updated_product_list.length;i++)
+      {
+       display2+=updated_product_list[i]+"<br>";
+      }
+    //  console.log(display1);
+    //  console.log("\nProducts with price > 50:");
+    //  console.log(exp_item);
+    //  console.log(display2);
+    out+=`<u>PRODUCTS WITH PRICES</u> <br><br> ${display1}`;
+    out+=`<u>PRODUCTS WITH PRICES ABOVE 50</u> <br><br> ${exp_item}`
+    out+=`<u>UPDATED PRODUCT LIST WITH PRICES</u> <br><br> ${display2}`
+ 
+    document.getElementById("id1").innerHTML=out;
+    </script>
+</body>
+</html>
